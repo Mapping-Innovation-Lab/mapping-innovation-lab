@@ -9,7 +9,9 @@ of this project.
 
 The user approved the four-page structure, supplied the MIL and Research copy,
 requested a publication placeholder, and specified the team order below. This
-document records the implementation details for review before coding.
+document records the approved implementation details. The user subsequently
+required all supplied MIL and Research text to remain VERBATIM: preserve wording,
+punctuation, paragraph boundaries, and order; change presentation only.
 
 ## Visual direction
 

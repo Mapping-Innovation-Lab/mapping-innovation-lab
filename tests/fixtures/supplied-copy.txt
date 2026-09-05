@@ -1,0 +1,67 @@
+Tabs:
+ 
+      MIL | Research | Publications | Team
+ 
+ 
+ 
+MIL tab:
+ 
+Mapping Innovation Lab
+AI · Knowledge · Time
+Can artificial intelligence genuinely innovate?
+As AI moves from synthesizing existing knowledge toward generating hypotheses and new ideas, this question becomes increasingly important. Novelty alone is not enough: an idea can be new without changing how we understand a field, while consequential innovations can reorganize existing ideas and open entirely new directions for thought.
+The Mapping Innovation Lab (MIL) is an interdisciplinary research collaboration exploring how new ideas emerge, evolve, and transform existing knowledge.
+Innovation is often described through individual discoveries, inventions, or creative works. But consequential ideas do more than add something new: they can reorganize how existing ideas relate to one another, opening new directions for thought and changing what becomes possible to imagine next. MIL develops computational approaches to study these processes across time and across domains, from science and technology to music and other forms of intellectual and creative activity.
+A central focus of our research is the emerging ability of artificial intelligence to represent and navigate large bodies of human knowledge. We investigate whether these representations can reveal the structure and historical evolution of ideas, help identify moments of conceptual reorganization, and ultimately provide new ways to explore the frontier of knowledge. Time is central to this effort: what can be understood, connected, or imagined depends on the knowledge available at a particular moment. By reconstructing knowledge from different points in time, we aim to study not only how ideas evolved, but also which possibilities were visible—and which remained hidden—from the perspective of the past.
+Our work brings together AI, science, history, philosophy, and music to address a broader question:
+Can we understand how innovation happens well enough to recognize—and perhaps help discover—the ideas that could change what comes next?
+ 
+ 
+Research Tab:
+ 
+ 
+Research
+
+At the Mapping Innovation Lab, we study innovation as a process of conceptual change: how new ideas emerge from existing knowledge, how they alter relationships among established ideas, and how they open new directions for exploration.
+
+Our research combines artificial intelligence, computational representations of knowledge, historical analysis, and interdisciplinary comparison. We currently pursue four closely connected directions.
+
+Mapping Conceptual Change
+
+Can transformative ideas leave measurable signatures in the structure of knowledge?
+
+We develop computational methods for representing bodies of knowledge as evolving conceptual landscapes. Rather than identifying innovation with novelty alone, we ask how the introduction of an idea changes relationships among existing concepts.
+
+Our current work uses counterfactual perturbations of embedding spaces to measure these changes retrospectively. By removing the textual footprint of an innovation and examining how the surrounding conceptual geometry changes, we can study whether major innovations produce distinctive patterns of conceptual reorganization. Initial studies span scientific developments including special relativity, Gödel's incompleteness theorems, the Higgs mechanism, deep learning, and transformers.
+
+The broader goal is to develop quantitative tools for studying how intellectual and creative landscapes reorganize as new ideas emerge.
+
+Knowledge Through Time
+
+What could have been known—or imagined—at a particular moment in history?
+
+Modern AI representations of historical texts inevitably contain information from the future. This creates an intriguing problem: they can tell us how we understand the past today, but not necessarily how the intellectual landscape appeared to someone living at the time.
+
+We are exploring time-bounded representations of knowledge constructed using only information available before a given historical moment. Such representations could allow us to reconstruct changing conceptual landscapes from the perspective of the past and ask which connections were already visible, which possibilities were nearby but unexplored, and which ideas required genuinely new conceptual structures to become thinkable.
+
+This temporal perspective provides a bridge between understanding historical innovation and asking what might be possible from the knowledge available now.
+
+From Mapping to Discovery
+
+Can understanding the structure of past innovation help us explore where consequential new ideas might arise?
+
+Historical innovation provides a unique experimental setting: we can reconstruct an intellectual landscape at an earlier time while already knowing what happened afterward. This allows us to investigate whether AI systems operating from historically constrained knowledge can recognize unresolved tensions, identify promising conceptual connections, or explore directions toward innovations that had not yet occurred.
+
+Our longer-term goal is to move from retrospective analysis toward prospective exploration. Rather than asking an AI system simply to generate novel ideas, we seek to understand whether the structure of existing knowledge can help identify promising directions for conceptual change—and whether AI can assist humans in exploring those directions.
+
+The aim is not to replace human creativity or scientific judgment, but to investigate whether AI can become a new instrument for navigating the frontier of ideas.
+
+Innovation Across Domains
+
+Are there common structures underlying innovation in very different forms of human creativity?
+
+Scientific innovation occurs under constraints of empirical evidence and explanatory consistency. Musical innovation unfolds through different combinations of aesthetic, cultural, mathematical, and technological forces. History and philosophy provide yet other perspectives on how concepts emerge, acquire meaning, and reshape intellectual traditions.
+
+MIL brings these perspectives together deliberately. We are beginning with science and music as complementary domains in which to investigate whether similar signatures of emergence, reorganization, diffusion, and influence can be identified.
+
+Over time, we hope to extend these approaches to other areas of intellectual and creative activity. Cross-domain comparison offers a particularly ambitious possibility: identifying which aspects of innovation are specific to individual disciplines and which may reflect more general principles governing the evolution of ideas.
