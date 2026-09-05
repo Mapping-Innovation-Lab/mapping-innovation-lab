@@ -14,12 +14,24 @@ function walk(dir) {
   });
 }
 const files = walk(root);
-function targetFor(value, source) {
-  if (/^(data:|mailto:|tel:)/.test(value)) return;
-  if (value === "https://dntounis.github.io/mapping-innovation-website/")
+function targetFor(value, source, kind = "navigation") {
+  if (/^data:image\/svg\+xml[;,]/i.test(value)) return;
+  if (kind === "navigation" && /^(data:|mailto:|tel:)/.test(value)) return;
+  if (
+    kind === "navigation" &&
+    value === "https://dntounis.github.io/mapping-innovation-website/"
+  )
     return;
   const pagePath = "/" + relative(root, source).replace(/index\.html$/, "");
   const url = new URL(value, origin + base + pagePath);
+  if (kind !== "navigation") {
+    assert.equal(
+      url.origin,
+      origin,
+      `External resource: ${value} in ${source}`,
+    );
+  }
+  if (kind === "connection") return;
   if (url.origin !== origin) return;
   assert.ok(
     url.pathname === base || url.pathname.startsWith(base + "/"),
@@ -62,14 +74,26 @@ for (const file of files) {
     const doc = new JSDOM(readFileSync(file, "utf8")).window.document;
     for (const element of doc.querySelectorAll("[href], [src]")) {
       // Connection hints identify an origin, not a file in the exported site.
-      if (element.matches('link[rel="preconnect"], link[rel="dns-prefetch"]'))
+      if (element.matches('link[rel="preconnect"], link[rel="dns-prefetch"]')) {
+        targetFor(element.getAttribute("href"), file, "connection");
         continue;
-      for (const attr of ["href", "src"])
-        if (element.hasAttribute(attr))
-          targetFor(element.getAttribute(attr), file);
+      }
+      for (const attr of ["href", "src"]) {
+        if (!element.hasAttribute(attr)) continue;
+        const resource =
+          attr === "src" ||
+          !element.matches(
+            'a, area, link[rel="canonical"], link[rel="alternate"]',
+          );
+        targetFor(
+          element.getAttribute(attr),
+          file,
+          resource ? "resource" : "navigation",
+        );
+      }
     }
     assert.equal(
-      doc.querySelectorAll('script[src^="https:"], iframe, form').length,
+      doc.querySelectorAll("iframe, form").length,
       0,
       `Unexpected external functionality: ${name}`,
     );
@@ -79,7 +103,7 @@ for (const file of files) {
     for (const match of css.matchAll(
       /url\(\s*(?:"([^"]*)"|'([^']*)'|([^)]*))\s*\)/g,
     ))
-      targetFor(match[1] ?? match[2] ?? match[3].trim(), file);
+      targetFor(match[1] ?? match[2] ?? match[3].trim(), file, "resource");
   }
 }
 assert.ok(
