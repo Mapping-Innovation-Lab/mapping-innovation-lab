@@ -141,6 +141,9 @@ a:hover {
   letter-spacing: 0.13em;
   animation: entrance 0.8s 0.12s both;
 }
+.brand-initial {
+  color: var(--blue);
+}
 .knowledge-lines {
   width: 100%;
   height: 155px;

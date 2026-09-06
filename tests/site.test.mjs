@@ -54,6 +54,24 @@ test("MIL renders every supplied block verbatim and in its original order", asyn
   );
 });
 
+test("masthead highlights only the MIL initials without changing its text", async () => {
+  const doc = await page();
+  assert.deepEqual(
+    [...doc.querySelectorAll("h1 .brand-initial")].map((e) => e.textContent),
+    ["M", "I", "L"],
+  );
+  assert.equal(doc.querySelector("h1").textContent, suppliedHome[0]);
+});
+
+test("decorative evolving lines retain their static fallback without visible controls", async () => {
+  const doc = await page();
+  const svg = doc.querySelector(".knowledge-lines");
+  assert.equal(svg.getAttribute("aria-hidden"), "true");
+  assert.equal(svg.querySelectorAll("path").length, 6);
+  assert.equal(svg.querySelectorAll("circle").length, 5);
+  assert.equal(doc.querySelectorAll(".knowledge-illustration button").length, 0);
+});
+
 test("Research renders every supplied block verbatim with working direction anchors", async () => {
   const doc = await page("research/");
   assert.deepEqual(

@@ -13,7 +13,13 @@ export default function Home() {
     <main id="main">
       <section className="home-hero">
         <div className="shell">
-          <h1 data-supplied>{copy[0]}</h1>
+          <h1 data-supplied>
+            {copy[0].split(" ").map((word, index) => (
+              <span key={word}>
+                {index > 0 ? " " : ""}<span className="brand-initial">{word[0]}</span>{word.slice(1)}
+              </span>
+            ))}
+          </h1>
           <p className="tagline" data-supplied>
             {copy[1]}
           </p>
