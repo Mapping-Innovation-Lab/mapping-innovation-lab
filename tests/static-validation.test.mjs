@@ -76,7 +76,7 @@ test("static validation accepts local assets, SVG data URLs, and external naviga
     <link rel="preconnect" href="/">
     <link rel="stylesheet" href="/mapping-innovation-lab/assets/site.css">
     <script src="/mapping-innovation-lab/assets/site.js"></script>
-    <a href="https://dntounis.github.io/mapping-innovation-website/">Paper companion website</a>
+    <a href="https://dntounis.github.io/geometric-signatures/">Paper companion website</a>
     <a href="https://example.org/research/">External research</a>
   `,
     `

@@ -64,32 +64,32 @@
       "affiliation": "",
       "bio": "",
       "role": "",
-      "url": "",
-      "portrait": ""
+      "url": "https://profiles.stanford.edu/ariel-schwartzman",
+      "portrait": "/team/ariel-schwartzman.jpg"
     },
     {
       "name": "Chris Chafe",
       "affiliation": "",
       "bio": "",
       "role": "",
-      "url": "",
-      "portrait": ""
+      "url": "https://profiles.stanford.edu/chris-chafe",
+      "portrait": "/team/chris-chafe.jpg"
     },
     {
       "name": "Thomas A. Ryckman",
       "affiliation": "",
       "bio": "",
       "role": "",
-      "url": "",
-      "portrait": ""
+      "url": "https://philosophy.stanford.edu/people/thomas-ryckman",
+      "portrait": "/team/thomas-ryckman.jpg"
     },
     {
       "name": "Dimitris Ntounis",
       "affiliation": "",
       "bio": "",
       "role": "",
-      "url": "",
-      "portrait": ""
+      "url": "https://dntounis.github.io/",
+      "portrait": "/team/dimitris-ntounis.jpg"
     }
   ],
   "publication": {
@@ -101,6 +101,6 @@
       "Thomas A. Ryckman"
     ],
     "paperUrl": "",
-    "companionUrl": "https://dntounis.github.io/mapping-innovation-website/"
+    "companionUrl": "https://dntounis.github.io/geometric-signatures/"
   }
 }

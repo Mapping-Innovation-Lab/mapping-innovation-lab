@@ -359,6 +359,43 @@ a:hover {
 .team-list li {
   border-bottom: 1px solid var(--line);
   padding: 28px 0 24px;
+  display: grid;
+  grid-template-columns: clamp(100px, 15vw, 180px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+}
+.team-portrait-frame {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.team-portrait-frame[data-close-crop="true"] .team-portrait {
+  transform: scale(1.75);
+  transform-origin: 50% 35%;
+}
+.team-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}
+.team-profile {
+  text-decoration: none;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+.team-profile:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.profile-arrow {
+  display: inline-block;
+  margin-left: 0.45em;
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: 0.45em;
+  vertical-align: middle;
 }
 .team-list h2 {
   margin: 0;
@@ -621,6 +658,15 @@ a:hover {
   }
   .site-footer nav {
     gap: 23px;
+  }
+}
+@media (max-width: 360px) {
+  .team-list li {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .team-portrait-frame {
+    width: 100px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

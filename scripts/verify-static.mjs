@@ -19,7 +19,10 @@ function targetFor(value, source, kind = "navigation") {
   if (kind === "navigation" && /^(data:|mailto:|tel:)/.test(value)) return;
   if (
     kind === "navigation" &&
-    value === "https://dntounis.github.io/mapping-innovation-website/"
+    [
+      "https://dntounis.github.io/geometric-signatures/",
+      "https://dntounis.github.io/",
+    ].includes(value)
   )
     return;
   const pagePath = "/" + relative(root, source).replace(/index\.html$/, "");

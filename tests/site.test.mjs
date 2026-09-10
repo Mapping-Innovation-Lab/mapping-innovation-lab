@@ -117,10 +117,27 @@ test("team names retain requested order and have no invented details", async () 
       "Dimitris Ntounis",
     ],
   );
-  assert.equal(doc.querySelectorAll("main img").length, 0);
+  const portraits = [...doc.querySelectorAll(".team-list img")];
+  assert.equal(portraits.length, 4);
+  const expected = [
+    ["ariel-schwartzman.jpg", "https://profiles.stanford.edu/ariel-schwartzman"],
+    ["chris-chafe.jpg", "https://profiles.stanford.edu/chris-chafe"],
+    ["thomas-ryckman.jpg", "https://philosophy.stanford.edu/people/thomas-ryckman"],
+    ["dimitris-ntounis.jpg", "https://dntounis.github.io/"],
+  ];
+  for (const [index, portrait] of portraits.entries()) {
+    assert.equal(portrait.getAttribute("src"), `${base}/team/${expected[index][0]}`);
+    assert.ok(existsSync(`out/team/${expected[index][0]}`));
+    const row = portrait.closest("li");
+    const name = row.querySelector("[data-team-name]");
+    assert.equal(portrait.alt, `Portrait of ${name.textContent}`);
+    assert.equal(row.querySelector("a").href, expected[index][1]);
+  }
+  assert.equal(portraits[3].closest(".team-portrait-frame")?.getAttribute("data-close-crop"), "true");
+  assert.equal(doc.querySelectorAll('[data-close-crop="true"]').length, 1);
   const records = JSON.parse(readFileSync("content/lab.json", "utf8")).team;
   for (const person of records) {
-    for (const key of ["affiliation", "bio", "role", "url", "portrait"])
+    for (const key of ["affiliation", "bio", "role"])
       assert.equal(person[key], "");
   }
 });
@@ -147,7 +164,7 @@ test("publication keeps exact title, manuscript author order and honest placehol
   assert.notEqual(doc.querySelector("[data-manuscript-status]").tagName, "A");
   assert.equal(
     doc.querySelector("[data-companion-link]").href,
-    "https://dntounis.github.io/mapping-innovation-website/",
+    "https://dntounis.github.io/geometric-signatures/",
   );
 });
 

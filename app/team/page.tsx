@@ -1,5 +1,6 @@
 import lab from "@/content/lab.json";
-import { metadataFor } from "@/content/site";
+import { metadataFor, pathFor } from "@/content/site";
+import Image from "next/image";
 export const metadata = metadataFor(
   "Team",
   "The Mapping Innovation Lab team: Ariel Schwartzman, Chris Chafe, Thomas A. Ryckman, and Dimitris Ntounis.",
@@ -15,7 +16,25 @@ export default function Team() {
       <ul className="team-list">
         {lab.team.map((person) => (
           <li key={person.name}>
-            <h2 data-team-name>{person.name}</h2>
+            <div
+              className="team-portrait-frame"
+              data-close-crop={person.name === "Dimitris Ntounis" ? "true" : undefined}
+            >
+              <Image
+                className="team-portrait"
+                src={pathFor(person.portrait)}
+                alt={`Portrait of ${person.name}`}
+                width={180}
+                height={180}
+                unoptimized
+              />
+            </div>
+            <h2>
+              <a className="team-profile" href={person.url}>
+                <span data-team-name>{person.name}</span>
+                <span className="profile-arrow" aria-hidden="true">↗</span>
+              </a>
+            </h2>
           </li>
         ))}
       </ul>

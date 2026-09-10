@@ -1,0 +1,23 @@
+Team portrait sources
+Retrieved 2026-09-10 from member pages supplied by Dimitris Ntounis.
+These third-party photographs are not covered by the website code license or
+any license for original lab text/figures. Rights remain with their respective
+owners; inclusion here does not grant permission for further reuse.
+
+Ariel Schwartzman
+Page: https://profiles.stanford.edu/ariel-schwartzman
+Image: https://profiles.stanford.edu/proxy/api/cap/profiles/85987/resources/profilephoto/350x350.1540344441462.jpg
+
+Chris Chafe
+Page: https://profiles.stanford.edu/chris-chafe
+Image: https://profiles.stanford.edu/proxy/api/cap/profiles/8054/resources/profilephoto/350x350.1368774000000.jpg
+
+Thomas A. Ryckman
+Image source page: https://www.lkb.fr/en/evenement/thomas-ryckman/
+Image: https://www.lkb.fr/wp-content/uploads/2024/04/Thomas-Ryckman.jpg
+Profile link: https://philosophy.stanford.edu/people/thomas-ryckman
+
+Dimitris Ntounis
+Image source page: https://profiles.stanford.edu/dimitrios-ntounis
+Image: https://profiles.stanford.edu/proxy/api/cap/profiles/293047/resources/profilephoto/350x350.1718749747967.jpg
+Profile link: https://dntounis.github.io/

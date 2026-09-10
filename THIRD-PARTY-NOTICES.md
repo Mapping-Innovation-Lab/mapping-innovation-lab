@@ -5,3 +5,8 @@ The visual tokens, paper-texture treatment, font setup, and static Next.js confi
 Newsreader is self-hosted through the pinned `@fontsource-variable/newsreader` package. The Newsreader Project Authors’ copyright and SIL Open Font License 1.1 are preserved in [public/licenses/Newsreader-OFL.txt](public/licenses/Newsreader-OFL.txt) and ship with the static export.
 
 These third-party licenses apply to the identified code and font assets. They do not grant a reuse license for the Mapping Innovation Lab’s newly supplied prose or publication content.
+# Member portraits
+
+Member photographs come from the Stanford and LKB pages selected by Dimitris.
+They are not covered by the website code license. Source URLs and the
+retrieval date are recorded in `public/licenses/portrait-sources.txt`.
