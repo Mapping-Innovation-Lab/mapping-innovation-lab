@@ -43,8 +43,9 @@ https://dntounis.github.io/mapping-innovation-lab/.
 - Team order and publication authorship are intentionally different.
 - Team names currently have no biographies, affiliations, roles, portraits, or
   profile links. Empty fields are intentional, not permission to invent details.
-- The publication is a title placeholder with a link to the paper companion;
-  do not invent a DOI, journal, date, or manuscript URL.
+- The publication links to [arXiv:2609.14917](https://arxiv.org/abs/2609.14917)
+  and the organization-hosted paper companion. Keep bibliographic details aligned
+  with the preprint; do not invent a journal publication or acceptance status.
 - The illustration is decorative, not an empirical research figure.
 - The existing paper companion is maintained and deployed separately.
 

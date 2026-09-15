@@ -142,7 +142,7 @@ test("team names retain requested order and have no invented details", async () 
   }
 });
 
-test("publication keeps exact title, manuscript author order and honest placeholder", async () => {
+test("publication keeps exact title and author order and links to the public preprint", async () => {
   const doc = await page("publications/");
   assert.equal(
     doc.querySelector("[data-publication-title]").textContent,
@@ -158,13 +158,14 @@ test("publication keeps exact title, manuscript author order and honest placehol
     ],
   );
   assert.equal(
-    doc.querySelector("[data-manuscript-status]").textContent,
-    "Manuscript link forthcoming",
+    doc.querySelector("[data-preprint-link]")?.href,
+    "https://arxiv.org/abs/2609.14917",
   );
-  assert.notEqual(doc.querySelector("[data-manuscript-status]").tagName, "A");
+  assert.match(doc.querySelector("[data-preprint-link]").textContent, /arXiv:2609\.14917/);
+  assert.doesNotMatch(doc.body.textContent, /Manuscript link forthcoming/);
   assert.equal(
     doc.querySelector("[data-companion-link]").href,
-    "https://dntounis.github.io/geometric-signatures/",
+    "https://mapping-innovation-lab.github.io/geometric-signatures-companion-website/",
   );
 });
 

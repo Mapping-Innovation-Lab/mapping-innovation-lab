@@ -14,7 +14,7 @@ export default function Publications() {
         <h1>Publications</h1>
       </header>
       <article className="publication">
-        <span className="section-kicker">Research manuscript</span>
+        <span className="section-kicker">Preprint · 2026</span>
         <div>
           <h2 data-publication-title>{paper.title}</h2>
           <ul className="author-list">
@@ -24,8 +24,10 @@ export default function Publications() {
               </li>
             ))}
           </ul>
-          <p className="manuscript-status" data-manuscript-status>
-            Manuscript link forthcoming
+          <p className="manuscript-status">
+            <a className="text-link" data-preprint-link href={paper.paperUrl}>
+              Read the preprint · arXiv:{paper.arxivId} <span aria-hidden="true">↗</span>
+            </a>
           </p>
           <a
             className="text-link"
